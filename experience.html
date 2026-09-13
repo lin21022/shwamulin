@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="experience.css">
+    <title>YuHusin • Experience </title>
+    <link rel="icon" href="images copy/logo_circle.ico" type="img/x-ico" />
+</head>
+
+<script>
+    const footer = document.querySelector('footer, .site-footer');
+    const ioFooter = new IntersectionObserver(
+        ([entry]) => {
+        document.body.classList.toggle('at-footer', entry.intersectionRatio > 0.35);
+        },
+        {
+        threshold: [0, 0.35, 1],
+        rootMargin: '0px 0px 0px 0px'
+        }
+    );
+
+    if (footer) ioFooter.observe(footer);
+</script>
+
+<body>
+    <div class="progress" aria-hidden="true"></div>
+    <button id="toTop" aria-label="Baxk to top">↑</button>
+    <header class="hero">
+        <div class="hero_top">
+            <a href=home.html><img id=logo src="images copy/logo_title.png" alt="Elysian Logo" ></a>
+            <nav class="nav_header">
+                <ul class="nav_list">
+                    <a href="index.html">Home</a> |
+                    <a href="./wwr/index.html" target="_blank">WWR</a> |
+                    <a href="ICE.html">ICE</a> |
+                    <a href="aboutme.html">About Me</a> |
+                    <a href="client_report.html"> Client Report</a>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="hero_center">
+            <h1>About Me</h1>
+
+        </div>
+
+        <div class="scroll-down">↓</div>
+    </header>
+    <main>
+        <section class="intro section reveal" data-delay="1">
+            <div class="intro__card">
+                <div class="intro__photo">
+                    <img src="images copy/IMG_2912.JPG" alt="Elysian portrait">
+                </div>
+
+                <div class="intro__text">
+                    <h2 class="hello">Hi! I’m <span>Elysian.</span></h2>
+                    <p>
+                        I’m studying <strong>Biochemistry</strong> at Brigham Young University–Idaho.
+                        I’m fascinated by how molecular interactions and chemical principles shape life.
+                    </p>
+                    <p>
+                        I also love blending scientific rigor with design & web development—turning complex ideas
+                        into clear, beautiful experiences.
+                    </p>
+                    <p>
+                        My north star: precision + creativity to inform, delight, and make things feel simple.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="exp" class=" section experience reveal" data-delay="2">
+            <h2 class="section__title left-only">Experience</h2>
+
+            <div class="exp-grid">
+            <div class="exp-date">
+                <div class="date">2025.01</div>
+                <div class="tick">Current</div>
+            </div>
+            <article class="exp-detail">
+                <h3 class="role">Online Teaching Assistant</h3>
+                <ul>
+                    <li>Supported 30+ students; clarified concepts and guided problem-solving.</li>
+                    <li>Gave constructive feedback on assignments.</li>
+                    <li>Bridged communication between students and instructors.</li>
+                </ul>
+            </article>
+            
+            <div class="exp-date">
+                <div class="date">2025.09</div>
+                <div class="tick">Current</div>
+            </div>
+            <article class="exp-detail">
+                <h3 class="role">Laboratory Teaching Assistant</h3>
+                <ul>
+                    <li>Prepared & supervised chemistry labs with safety protocols.</li>
+                    <li>Explained complex ideas in plain language; linked theory to practice.</li>
+                    <li>Assisted grading, lab reports, and record keeping.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="contact section reveal" data-delay="3">
+            <h2 class="section__title">Contact Me</h2>
+
+            <form class="contact__form" action="#" method="post">
+                <div class="form__left">
+                    <label>
+                        <span>Your Name</span>
+                        <input type="text" name="name" required>
+                    </label>
+
+                    <label>
+                        <span>Your Email</span>
+                        <input type="email" name="email" required>
+                    </label>
+
+                    <label>
+                        <span>Phone Number</span>
+                        <input type="tel" name="phone">
+                    </label>
+                </div>
+
+                <div class="form__right">
+                    <label>
+                        <span>Your Message</span>
+                        <textarea name="message" rows="8" required></textarea>
+                    </label>
+                </div>
+
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <script>
+         const dots = document.querySelectorAll('.side-dots button');
+        dots.forEach(btn=>{
+            btn.addEventListener('click', ()=>{
+                const id = btn.getAttribute('data-target');
+                const el = document.querySelector(id);
+                if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
+            });
+        });
+
+        const io = new IntersectionObserver((entries)=>{
+            entries.forEach(e=>{
+                if (e.isIntersecting){
+                    dots.forEach(d=>d.classList.toggle('active', d.getAttribute('data-target') === '#'+e.target.id));
+                }
+            });
+        } , {threshold:.6});
+        ['#intro','#exp','#contact'].forEach(id=>{
+            const el=document.querySelector(id); if(el) io.observe(el);
+        });
+
+        const root = document.documentElement;
+        const toTop = document.getElementById('toTop');
+        function onScroll() {
+            const y = window.scrollY || 0;
+            const dh = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+            const h  = window.innerHeight;
+            root.style.setProperty('--progress', Math.max(0, Math.min(1, y / (dh - h))));
+            if (toTop) toTop.classList.toggle('show', y > 400);
+        }
+        window.addEventListener('scroll', onScroll, {passive:true});
+        onScroll();
+        if (toTop) toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+        const ioReveal = new IntersectionObserver((entries)=>{
+            entries.forEach(e => e.target.classList.toggle('is-visible', e.isIntersecting));
+        }, {threshold: .2, rootMargin: "0px 0px -10% 0px"});
+        document.querySelectorAll('.reveal').forEach(el => ioReveal.observe(el));
+
+        const heroTitle = document.querySelector('.hero_center h1');
+        window.addEventListener('scroll', () => {
+            const dy = Math.min(40, window.scrollY * 0.08);
+            if (heroTitle) heroTitle.style.transform = `translateY(${dy}px)`;
+        }, {passive:true});
+
+        const exp = document.querySelector('.experience');
+        if (exp) {
+            const ioExp = new IntersectionObserver(([e])=>{
+                if (!e.isIntersecting) return;
+            const rect = e.target.getBoundingClientRect();
+            const vh   = window.innerHeight;
+            const p = Math.max(0, Math.min(1, 1 - rect.top / Math.max(1, vh)));
+            e.target.style.setProperty('--expProg', p.toFixed(3));
+        }, {threshold: Array.from({length:10},(_,i)=>(i+1)/10)});
+        ioExp.observe(exp);
+        }
+    </script>
+</body>
+<footer class="site-footer">
+    <nav class="footer-nav">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/wwr/index.html">WWR</a></li>
+        <li><a href="ICE.html">ICE</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="client_report.html">Client Report</a></li>
+        </ul>
+    </nav>
+
+    <p class="legal">
+        ©copyright 2025. All rights reserved.
+    </p>
+    <p class="policies">
+        <a href="#">Terms of Service</a>
+        <span class="dot">•</span>
+        <a href="#">Privacy Policy</a>
+    </p>
+
+    <div class="social">
+        <a class="social__link facebook" href="https://facebook.com" target="_blank">
+            <img src="images copy/facebook.png" data-color="images copy/facebook-Icon-color.png" alt="Facebook icon">
+        </a>
+
+        <a class="social__link instagram" href="https://instagram.com" target="_blank">
+            <img src="images copy/instagram.png" data-color="images copy/instagram-Icon-color.png" alt="Instagram icon">
+        </a>
+
+        <a class="social__link youtube" href="https://youtube.com" target="_blank">
+            <img src="images copy/youtube.png" data-color="images copy/youtube-Icon-color.png" alt="YouTube icon">
+        </a>
+    </div>
+    <script>
+        document.querySelectorAll('.social__link').forEach(link => {
+        const img = link.querySelector('img');
+        const graySrc  = img.getAttribute('src');
+        const colorSrc = img.dataset.color;
+
+        link.addEventListener('mouseenter', () => {
+            img.src = colorSrc;
+        });
+
+        link.addEventListener('mouseleave', () => {
+            img.src = graySrc;
+        });
+        });
+    </script>
+  <img class="footer-logo" src="images copy/logo_title.png" alt="Elysian Logo">
+</footer>
