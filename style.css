@@ -277,7 +277,7 @@ body {
     width: min(640px, 80%);
     margin: 0 auto;
     object-fit:cover;
-    border-radius: 15px;
+    border-radius: 100%;
     object-fit: cover;
     transform: translateY(6px);
     transition: transform .35s ease, box-shadow .35s ease, filter .35s ease;
