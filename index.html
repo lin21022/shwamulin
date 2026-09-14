@@ -53,15 +53,88 @@
             <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="About Me">
             </div>
             <aritcle class="text fade-up delay-3">
-                <p>I'm from Taiwan.</p>
-                <p>Student at BYUI</p>
-                <ul>
-                    <li>Major: Biochemistry</li>
-                    <li>Minor: Web Development</li>
-                </ul>
+                <p class="title">Hi, I’m YuHsin! </p>
+                <br>
+                <p class="paragraph">A mechanical engineering student from Taiwan with a minor in Data Science.</p>
+
+                <p class="paragraph">I turn ideas into working systems, exploring the intersection of mechanical engineering, energy, thermal control, and intelligent technology.</p>
+
+                <p class="paragraph">Build. Learn. Improve.</p>
+                
             </aritcle>
-            <p class="more fade-up delay-3"><a href=aboutme.html>read more →</a></p>
+            <p class="more fade-up delay-3"><a href=experience.html>View My Experience  → </a></p>
         </article>
+        </section>
+
+        <section class="skills">
+            <div class="skills_sticky">
+                <h2 class="skills_title fade-up delay-1">Skills</h2>
+                <div class="skills_items">
+                    <div class="skills_item_Language">
+                        <div class="skills_text">
+                            <h2>Language</h2>
+                            <br>
+                            <ul>
+                                <li>Mandarin - Native proficiency</li>
+                                <li>English - Professional proficiency</li>
+                            </ul>
+                        </div>
+                        <img class="skills_icon" src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789344234/language-icon-Photoroom_rhx6fg.png" alt="Language">
+                    </div>
+                    <div class="skills_item_Programming">
+                        <div class="skills_text">
+                            <h2>Programming</h2>
+                            <br>
+                            <ul>
+                                <li>Python</li>
+                                <li>Mathematica</li>
+                                <li>MATLAB</li>
+                                <li>R</li>
+                            </ul>
+                        </div>
+                        <img class="skills_icon" src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789344579/display-code-icon-for-programming-and-software-development-vector_1_vowpyr.png" alt="Programming">
+                    </div>
+                    <div class="skills_item_DataAnalysis">
+                        <div class="skills_text">
+                            <h2>Data Analysis</h2>
+                            <ul>
+                                <li>R</li>
+                                <li>SQL</li>
+                                <li>Machine Learning</li>
+                                <li>Data Visualization</li>
+                            </ul>
+                        </div>
+                        <img  class="skills_icon" src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789344335/data-analysis-icon2-Photoroom_zv0ihb.png" alt="Data Analysis">
+                    </div>
+                    <div class="skills_item_MicrocontrollerSystem">
+                        <div class="skills_text">   
+                            <h2>Microcontroller System</h2>
+                            <br>
+                            <ul>
+                                <li>Arduino</li>
+                                <li>ESP 32</li>
+                                <li>Micro:bit</li>
+                                <li>PID Control</li>
+                            </ul>
+                        </div>
+                        <img class="skills_icon" src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789346314/arduino-uno-board_j161vc.png" alt="Microcontroller System">
+                    </div>
+                    <div class="skills_item_engineeringDesignTools">
+                        <div class="skills_text">
+                            <h2>Engineering Design Tools</h2> 
+                            <br> 
+                            <ul>
+                                <li>SolidWorks</li>
+                                <li>Finite Element Analysis (FEA)</li>
+                                <li>Revit</li>
+                                <li>Thermal Design</li>
+                                <li>3D Printing</li>
+                            </ul>
+                        </div>
+                        <img class="skills_icon" src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789344526/design-tools-icon_h9x7ge.png" alt="Engineering Design Tools">
+                    </div>
+                </div>
+            </div>  
         </section>
 
         <section  class="quicklinks">
@@ -168,6 +241,24 @@
             img.src = graySrc;
         });
         });
+
+        (function () {
+        const items = document.querySelectorAll('.skills_items > div');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target); // 出現過一次就不再理它，不會消失
+            }
+            });
+        }, {
+            threshold: 0.3, // item 進入畫面 30% 就觸發
+            rootMargin: '0px 0px -10% 0px' // 稍微提早或延後觸發時機，可自行微調
+        });
+
+        items.forEach((item) => observer.observe(item));
+        })();
     </script>
   <img class="footer-logo" src="images/logo_title.png" alt="Elysian Logo">
 </footer>
