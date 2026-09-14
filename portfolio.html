@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>YuHsin • Portfolio </title>
+    <link rel="icon" href="images/logo_circle.ico" type="img/x-ico" />
+</head>
+
+<script>
+    const footer = document.querySelector('footer, .site-footer');
+    const ioFooter = new IntersectionObserver(
+        ([entry]) => {
+        document.body.classList.toggle('at-footer', entry.intersectionRatio > 0.35);
+        },
+        {
+        threshold: [0, 0.35, 1],
+        rootMargin: '0px 0px 0px 0px'
+        }
+    );
+
+    if (footer) ioFooter.observe(footer);
+</script>
+
+<body>
+    <main id="content">
+        <header class="hero">
+            <div class="hero_top">
+                <a href=home.html><img id=logo src="images copy/logo_title.png" alt="Elysian Logo" ></a>
+                <nav class="nav_header">
+                    <ul class="nav_list">
+                        <a href="index.html">About Me</a> |
+                        <a href="experience.html">Experience</a> |
+                        <a href="portfolio.html">Portfolio</a> |
+                        <a href="certification.html">Certification</a> 
+                    </ul>
+                </nav>
+            </div>
+        
+            <div class="hero_center">
+                <h1>My Portfolio</h1>
+                <p>Aspiring Mechanical Engineer & Researcher</p>
+            </div>
+
+            <div class="scroll-down">↓</div>
+        </header>
+
+
+        <section class="project-section">
+            <!-- Project 1 -->
+            <div class="project-card" id="project1">
+                <div class="project-info">
+                    <h2>PowerAsia R&D Mechanical Engineer Intern</h2>
+                    <p>PowerAsia developed an AI-powered monitoring system for early motor fault detection.[cite: 1] To expand its capabilities, the R&D team extended the system to detect mechanical faults such as belt failures and cooling fan malfunctions.[cite: 1] I designed and implemented a current trend–based algorithm for motor belt fault detection and integrated it into the AI monitoring system.[cite: 1]</p>
+                    <h3>Technical Details & Skills Applied</h3>
+                    <ul>
+                        <li>Developed a current trend–based belt fault detection algorithm.[cite: 1]</li>
+                        <li>Differentiated belt slippage, belt breakage, VFD speed adjustments, and normal current fluctuations.[cite: 1]</li>
+                        <li>Implemented and validated the detection algorithm using C++ (Arduino).[cite: 1]</li>
+                        <li>Enhanced the AI monitoring system by expanding predictive maintenance capabilities to mechanical fault detection.[cite: 1]</li>
+                    </ul>
+                </div>
+                <div class="project-media">
+                    <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400606/%E6%8A%95%E5%BD%B1%E7%89%872_hxc51i.png" alt="Algorithm Workflow">
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" id="project2">
+                <div class="project-info">
+                    <h2>Fluid Mechanism - Pump System Design</h2>
+                    <p>Design a pump and piping system to deliver water from a well to a tank while satisfying flow rate, pressure, and cost constraints.[cite: 1] The recommended design achieves safe operating pressure, required flow rate, and cost efficiency by operating the pump at 3600 rpm with a 3.25 in impeller and 2.5 in schedule 80 PVC pipe.[cite: 1]</p>
+                    <h3>Technical Details & Skills Applied</h3>
+                    <ul>
+                        <li>Calculated head loss and system curves for water flow.[cite: 1]</li>
+                        <li>Analyzed pump curves and operating points.[cite: 1]</li>
+                        <li>Estimated pump power, energy use, and costs.[cite: 1]</li>
+                        <li>Evaluated designs and selected optimal solution.[cite: 1]</li>
+                    </ul>
+                </div>
+                <div class="project-media">
+                    <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400606/%E6%8A%95%E5%BD%B1%E7%89%873_hnrv3i.png" alt="Pump System Graph">
+                </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="project-card" id="project8">
+                <div class="project-info">
+                    <h2>Mechatronic System I - Sous Vide</h2>
+                    <p>The purpose of this project was to design and implement an Arduino-based sous-vide cooking controller that accurately maintain a user-defined water temperature for an extended period using closed-loop feedback control.[cite: 1]</p>
+                    <h3>Technical Details & Skills Applied</h3>
+                    <ul>
+                        <li>Closed loop control and PID control implement.[cite: 1]</li>
+                        <li>Real-time feedback C/C++ programming on Arduino.[cite: 1]</li>
+                        <li>Designed a complete user interface using LCD and joystick for selecting temperature and duration.[cite: 1]</li>
+                    </ul>
+                </div>
+                <div class="project-media">
+                    <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400606/%E6%8A%95%E5%BD%B1%E7%89%879_bksplx.png" alt="Sous Vide Controller">
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="project-card" id="project4">
+                <div class="project-info">
+                    <h2>Thermal Design - Load Calculation and Design Optimization</h2>
+                    <p>This project focuses on heating and cooling load analysis by applying principles of thermodynamics, psychrometric chart and air treatment within an air handling unit (AHU). I evaluated the AHU system in the Rexburg Temple by calculating the thermal loads for both the existing design, which utilizes a steam humidifier, and a proposed design incorporating a pressurized humidifier. Through a comparative analysis of energy consumption and operational costs, I identified the pressurized humidifier as a more efficient alternative. Based on these findings, I recommended replacing the steam humidifier to improve overall system performance and energy efficiency.</p>
+                    <h3>Technical Details & Skills Applied</h3>
+                    <ul>
+                        <li>Thermal system process.</li>
+                        <li>Estimate the cost and energy use.</li>
+                        <li>Psychrometric analysis and air property evaluation.</li>
+                        <li>Heating and cooling load calculations.</li>
+                        <li>Thermal system process modeling.</li>
+                        <li>Energy consumption and operational cost estimation.</li>
+                        <li>Humidification system analysis.</li>
+                        <li>Mass and energy balance analysis for humid air streams.</li>
+                        <li>HVAC system performance evaluation.</li>
+                    </ul>
+                </div>
+                <div class="project-media">
+                    <img src="YOUR_IMAGE_LINK_HERE" alt="Thermal Design Optimization">
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card" id="project5">
+                <div class="project-info">
+                    <h2>Thermal Design - Ventilation and Duct System</h2>
+                    <p>This project demonstrates my understanding of commercial kitchen ventilation and ductwork design using Revit. Based on the provided Project E model of the Happy Teriyaki restaurant, I developed a mechanical ventilation system focused on hood selection, airflow calculation, and duct layout. The design evaluates exhaust and make-up air distribution across cooking equipment to ensure proper airflow balance and code-compliant performance. A complete ductwork system was modeled in Revit, integrating airflow calculations, equipment placement, and 3D system coordination within the architectural space.</p>
+                    <h3>Technical Details & Skills Applied</h3>
+                    <ul>
+                        <li>Airflow (CFM) and static pressure calculations.</li>
+                        <li>Duct sizing and system layout design.</li>
+                        <li>Hood, exhaust fan, and make-up air unit selection.</li>
+                        <li>Revit modeling of mechanical systems.</li>
+                        <li>Ventilation principle and code compliance.</li>
+                    </ul>
+                </div>
+                <div class="project-media">
+                    <img src="YOUR_IMAGE_LINK_HERE" alt="Ventilation and Duct System">
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card" id="project6">
+                <div class="project-info">
+                    <h2>Numerical Method - Root Finding Method Comparison</h2>
+                    <p>This project aims to evaluate the performance of root-finding methods, including Bisection, Secant, and Ridder's methods. To perform this comparison, the root of the equation, $x \sin(10x) - x = 1$, was determined using each method. Initial guesses of $x = 0.6$ and $x = 1.2$ were used for the calculations.</p>
+                    <h3>Technical Details & Skills Applied</h3>
+                    <ul>
+                        <li>Implemented Bisection, Secant, and Ridder's methods in Python.</li>
+                        <li>Chose initial guesses to ensure convergence.</li>
+                        <li>Compared iteration counts and approximation errors.</li>
+                        <li>Visualized convergence and solution accuracy.</li>
+                        <li>Developed code modularity to allow easy comparison of multiple root-finding methods.</li>
+                    </ul>
+                </div>
+                <div class="project-media">
+                    <img src="YOUR_IMAGE_LINK_HERE" alt="Numerical Method Comparison">
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="project-card" id="project7">
+                <div class="project-info">
+                    <h2>Polaris Assembler Internship - Assembly Line Quality Assurance</h2>
+                    <p>I worked on production line as an assembly operator. I was assigned to run security test at the end of line making sure the completion, quality and security of snowmobiles for multiple models.</p>
+                    <h3>Technical Details & Skills Applied</h3>
+                    <ul>
+                        <li>Conducted end-of-line security and quality tests on multiple snowmobile models.</li>
+                        <li>Implemented and optimized standard work instructions, improving assembly efficiency, quality, and productivity.</li>
+                        <li>Identified real-time issues, collaborated with team members and supervisors, and applied engineering solutions to maintain smooth production.</li>
+                        <li>Analyzed and refined assembly procedures for different models, reducing defects and assembly time.</li>
+                        <li>Learned problem-solving techniques from engineers and applied them to practical assembly challenges.</li>
+                    </ul>
+                    <h3>Results</h3>
+                    <ul>
+                        <li>Enhanced production efficiency and reduced defect rates through process improvements.</li>
+                        <li>Strengthened teamwork and communication skills through collaboration with engineers and supervisors.</li>
+                        <li>Expanded engineering knowledge and problem-solving abilities by learning from professional engineers.</li>
+                    </ul>
+                </div>
+                <div class="project-media">
+                    <img src="YOUR_IMAGE_LINK_HERE" alt="Polaris Assembler Internship">
+                </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="project-card" id="project8">
+                <div class="project-info">
+                    <h2>Thermodynamic I</h2>
+                    <p>This is my first time to step in this area. It was hard for me at the beginning, but it became more intriguing. The course started from recognizing the property of fluid and went into the laws of thermodynamic. Finally, I was able to analyze the basic cycle in the energy industry. Visiting the real heat plan allowed me to see how to apply what have learned in real life. I am proud of myself when I could deal with all the basic cycles. Although this is a fundamental course for thermodynamic, my interests in this subject is triggered by it and I really want to dig into it deeper.</p>
+                    <h3>Course Outcome</h3>
+                    <ul>
+                        <li>Determine properties of state.</li>
+                        <li>Apply the First Law of Thermodynamics.</li>
+                        <li>Analyze reversible and irreversible processes.</li>
+                        <li>Implement second law of thermodynamics.</li>
+                        <li>Deal with the basic cycle (Otto, Diesel, Brayton, Rankine, and refrigeration).</li>
+                        <li>Evaluate the efficiency of engine and the coefficients of performance of heat pump and refrigerator.</li>
+                    </ul>
+                </div>
+                <div class="project-media">
+                    <img src="YOUR_IMAGE_LINK_HERE" alt="Thermodynamics Coursework">
+                </div>
+            </div>
+
+            <!-- Project 9 -->
+            <div class="project-card" id="project9">
+                <div class="project-info">
+                    <h2>Mechanical Design - SolidWorks FEA</h2>
+                    <p>This project demonstrates my experience using Finite Element Analysis (FEA) to evaluate the structural performance and load distribution of a base subjected to an external remote load. The main objective was to determine stress. Throughout this study, I focused on identifying critical regions where failure might occur, verifying results with engineering principles, and using simulation insights to evaluate design performance and safety.</p>
+                    <h3>Technical Details & Skills Applied</h3>
+                    <ul>
+                        <li>Conducted realistic FEA studies in SolidWorks, including fixtures, loads, and constraints.</li>
+                        <li>Applied remote loads and analyzed load transfer through components.</li>
+                        <li>Improved mesh quality using refinement and adaptive meshing in high-stress regions.</li>
+                        <li>Interpreted simulation outputs such as von Mises stress, displacement, and factor of safety to make engineering design decisions.</li>
+                        <li>Applied engineering judgment to verify results and validate simulation assumptions.</li>
+                        <li>Strengthened ability to use simulation as a design tool for optimization and performance improvement.</li>
+                        <li>Successfully obtained the SolidWorks Simulation Associate (CSWA–Simulation) certification, demonstrating proficiency in FEA fundamentals and simulation workflow.</li>
+                    </ul>
+                </div>
+                <div class="project-media">
+                    <img src="YOUR_IMAGE_LINK_HERE" alt="SolidWorks FEA">
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <!-- 這裡可以放原本的 Footer 區塊 -->
+</body>
+</html>

@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Slackside+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slackside+One&family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+html {
+    scroll-behavior : smooth;
+}
+*{box-sizing:border-box}
+img{display: block; max-width:100% ;}
+a {text-decoration: none; color:inherit;}
+
+body {
+    font-family: DM Serif Display, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #383838;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    background: url("images/Empty\ Book.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 14px 18px;
+    overflow: hidden;
+    animation: heroZoom 2s ease-in-out infinite alternate;
+    transition: filter 0.5s ease, background-postion 0.5s ease;
+}
+
+@keyframes heroZoom {
+    0% {background-size:100% auto;}
+    100% {background-size: 110% auto;}
+}
+
+
+.hero_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:16px;
+}
+
+#logo {
+    width: 8%;
+    height:auto;
+    margin-left: 2%;
+    margin-top: -2.3%;
+    animation: logo-float 6s ease-in-out infinite;
+    will-change: transform;
+    position: fixed;
+}
+
+#logo:hover {
+    animation: logo-wiggle .6s ease both;
+}
+@keyframes logo-float {
+    0%,100% {transfrom:translateY(0);}
+    50% {transform:trranslateY(-6px);}
+}
+
+@keyframes logo-wiggle {
+    0% {transform: rotate(0deg) scale(1);}
+    25% {transform: rotate(-4deg) scale(1.02);}
+    50% {transform: rotate(3deg) scale(1.02);}
+    75% {transform: rotate(-2deg) scale(1.01);}
+    100% {transform: rotate(0deg) scale(1);}
+}
+
+.nav_list {
+    font-family: "DM Serif Display", serif;
+    font-size: 20px;
+    font-weight: 900;
+    overflow: hidden;
+    list-style: none;
+    margin: 25px;
+    padding-right: 150%;
+    display: flex;
+    justify-self: center;
+    align-items:center;
+    gap: 15%;
+    white-space:nowrap;
+    letter-spacing: 2px;
+}
+
+.nav_list a {
+    color: #6f6f6f;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    position:relative;
+}
+
+.nav_list a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #70655c; /* accent */
+    border-radius: 2px;
+    box-shadow: 0 0 5px #70655c80; /* soft glow */
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav_list a:hover {
+    color : #3c3b3c;
+    text-shadow: 0 0 5px #70655c55; /* soft text glow */
+    transform: translateY(-5px);
+    background-size: 100% 2px;
+}
+
+.nav_list a:hover::after {
+    width: 100%;
+    background-color: #494d4e;
+}
+
+.hero_center {
+    flex: 1 1 auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+}
+
+.hero_center h1{
+    margin:0 0 8px;
+    font-family: "Slackside One", cursive;
+    font-weight:800;
+    font-size: clamp(100px, 7vw, 66px);
+    letter-spacing: 0.08em;
+    color:#383838;
+    margin:0;
+    position:relative;
+    transition: all 0.5s ease;
+    animation: bounce-in .7s cubic-bezier(.26, .68, .3, 1.2)
+}
+
+.hero h1:hover{ 
+    transform: translateY(-2px) scale(1.02); 
+    transition: transform .01s ease; 
+    animation: boop .25s ease both;
+}
+
+@keyframes bounce-in {
+    0% {transform: translateY(24px) scale(.96); opacity: 0;}
+    60% {transform: translateY(-6px) scale(1.02); opacity: 1;}
+    100% {transform: translateY(0) scale(1);}
+}
+
+@keyframes boop {
+    0% {transform: translateY(0) scale(1);}
+    50% {transform: translateY(-3px) scale(1.04);}
+    100% {transform: translateY(0) scale(1);}
+}
+
+.hero_center p {
+    font-family: "DM Serif Display", serif;
+    font-size: 22px;
+    color: #494d4e;
+    text-align: center;
+    letter-spacing: 1.2px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    opacity: 0.85;
+    transition: all 0.4s ease;
+}
+
+.hero p:hover{  
+    transform: translateY(-1px);     
+}
+
+.scroll-down {
+    position:absolute;
+    bottom: 28px;
+    left:50%;
+    transform: translactX(-50%);
+    font-size:24px;
+    color:#383838;
+    animation: bounce 1.6s infinite;
+}
+
+@keyframes bounce{
+    0%, 100% {transform: translate(-50%, 0);}
+    50% {transform: translate(-50%, -10ps);}
+}
+
+    /* Portfolio Page Specific Styles */
+.page-header {
+    font-size: 22px; 
+    color: #494d4e;
+    padding: 150px 12% 50px;
+    text-align: center;
+    background: url("images/Empty\ Book.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+}
+.page-header h1 {
+    font-family: "Slackside One", cursive;
+    font-size: 70px;
+    color: #383838;
+    margin: 0; 
+}
+.project-section {
+    padding: 60px 12%;
+}
+.project-card {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.project-card:nth-child(even) {
+    direction: rtl; /* 讓偶數專案的圖片與文字交錯排版 */
+}
+.project-card:nth-child(even) > * {
+    direction: ltr;
+}
+.project-info h2 {
+    font-size: 32px;
+    margin-top: 0;
+    color: #cd5921;
+}
+.project-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #494d4e;
+}
+.project-info h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    border-bottom: 1px solid #dfe0e1;
+    padding-bottom: 5px;
+}
+.project-info ul {
+    font-size: 18px;
+    line-height: 1.8;
+    padding-left: 20px;
+    color: #494d4e;
+}
+.project-media img {
+    width: 100%;
+   border-radius: 8px;
+   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+@media (max-width: 900px) {
+    .project-card {
+    grid-template-columns: 1fr;
+    }
+    .project-card:nth-child(even) {
+        direction: ltr;
+    }
+}
