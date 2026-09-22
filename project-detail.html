@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>YuHsin • Project </title>
+    <link rel="icon" href="images/logo_circle.ico" type="img/x-ico" />
+</head>
+
+<script>
+    const footer = document.querySelector('footer, .site-footer');
+    const ioFooter = new IntersectionObserver(
+        ([entry]) => {
+        document.body.classList.toggle('at-footer', entry.intersectionRatio > 0.35);
+        },
+        {
+        threshold: [0, 0.35, 1],
+        rootMargin: '0px 0px 0px 0px'
+        }
+    );
+
+    if (footer) ioFooter.observe(footer);
+</script>
+
+<body>
+    <button id="navBurger" class="nav-burger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="navFlyout" class="nav-flyout">
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="certification.html">Certification</a></li>
+            <li><a href="https://drive.google.com/file/d/1PfCbcMhjt_pN-BeB-F36cjD4uYIp4P0H/view?usp=sharing" target="_blank">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/yuhsin-lin-237580235/" target="_blank">Linkedin</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <header class="hero">
+            <div class="hero_top">
+                <a href=home.html><img id=logo src="images copy/logo_title.png" alt="Elysian Logo" ></a>
+                <nav class="nav_header">
+                    <ul class="nav_list">
+                        <a href="index.html">About Me</a> |
+                        <a href="experience.html">Experience</a> |
+                        <a href="portfolio.html">Portfolio</a> |
+                        <a href="certification.html">Certification</a> 
+                    </ul>
+                </nav>
+            </div>
+            <div class="hero_center">
+                <p class="detail-role" id="detailRole"></p>
+                <h1 id="detailTitle">Loading...</h1>
+            </div>
+        </header>
+
+        <section class="detail-body">
+            <a class="back-link" href="portfolio.html">← Back to Portfolio</a>
+
+            <div class="detail-gallery" id="detailGallery"></div>
+
+            <div class="detail-text">
+                <h3>Overview</h3>
+                <p id="detailDescription"></p>
+
+                <h3>Technical Details &amp; Skills Applied</h3>
+                <ul id="detailSkills"></ul>
+
+                <div id="detailResultsWrap" style="display:none;">
+                    <h3>Results</h3>
+                    <ul id="detailResults"></ul>
+                </div>
+
+                <a id="detailDemo" class="pd-demo" style="display:none;" target="_blank">Watch Demo →</a>
+            </div>
+        </section>
+
+        <nav class="detail-nav">
+            <a id="prevProject" class="detail-nav-link">← Previous Project</a>
+            <a id="nextProject" class="detail-nav-link">Next Project →</a>
+        </nav>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <img id="lightboxImg" src="" alt="">
+        <span class="lightbox-close" id="lightboxClose">✕</span>
+    </div>
+
+    <script src="projects-data.js"></script>
+    <script src="detail.js"></script>
+
+    <!-- 這裡可以放原本的 Footer 區塊 -->
+</body>
+<script>
+    (function () {
+    const THRESHOLD = 150; // 捲動超過 150px 就顯示漢堡
+
+    function toggleNav() {
+        document.body.classList.toggle('nav-scrolled', window.scrollY > THRESHOLD);
+    }
+
+    window.addEventListener('scroll', toggleNav, { passive: true });
+    toggleNav();
+
+    // 額外補上「點擊」也能開合，方便手機/觸控裝置使用（hover 在觸控裝置上不穩定）
+    const burger = document.getElementById('navBurger');
+    const flyout = document.getElementById('navFlyout');
+
+    burger.addEventListener('click', () => {
+        flyout.classList.toggle('force-open');
+    });
+
+    // 點選單以外的地方，收起被點開的選單
+    document.addEventListener('click', (e) => {
+        if (!flyout.contains(e.target) && !burger.contains(e.target)) {
+            flyout.classList.remove('force-open');
+        }
+    });
+    })();
+</script>
+</html>

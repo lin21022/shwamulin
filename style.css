@@ -120,6 +120,98 @@ body {
     width: 100%;
     background-color: #494d4e;
 }
+.nav-burger {
+    position: fixed;
+    top: 24px;
+    right: 28px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background:transparent;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 50;
+    opacity: 0;
+    transform: translateY(-12px);
+    pointer-events: none;
+    transition: opacity .4s ease, transform .4s ease, box-shadow .3s ease;
+}
+
+body.nav-scrolled .nav-burger {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.nav-burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #494d4e;
+    border-radius: 2px;
+    transition: background .3s ease;
+}
+
+.nav-burger:hover span { background: #cd5921; }
+
+.nav-flyout {
+    position: fixed;
+    right: 0.0000000001px;
+    width: 300px;
+    height:100vh;
+    background: #f3f3f3;
+    padding: 100px 30px 15px;
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+    pointer-events: none;
+    transition: opacity .3s ease, transform .3s ease;
+    z-index: 45;
+}
+
+/* 滑鼠停在漢堡上，或已經移進選單裡，都保持展開 */
+body.nav-scrolled .nav-burger:hover + .nav-flyout,
+body.nav-scrolled .nav-flyout:hover,
+.nav-flyout.force-open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.nav-flyout ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-flyout li a {
+    display: block;
+    padding: 20px 10px;
+    font-family: "DM Serif Display", serif;
+    font-size: 17px;
+    letter-spacing: .05em;
+    color: #494d4e;
+    border-radius: 8px;
+    transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+
+.nav-flyout li a:hover {
+    background: #f5efe9;
+    color: #cd5921;
+    transform: translateX(4px);
+}
+
+@media (max-width: 640px) {
+    .nav-burger { top: 16px; right: 16px; }
+    .nav-flyout { top: 16px; right: 16px; width: 190px; }
+}
 
 .hero_center {
     flex: 1 1 auto;
@@ -496,6 +588,7 @@ body {
 .portfolio .more a:hover {
     color: #cd5921;
     transform: translateX(5px);
+    text-decoration: underline;
 }
 
 /* 響應式設計：在平板與手機上自動縮排 */
@@ -603,6 +696,7 @@ body {
     transition: opacity .35s ease, filter .35s ease, transform .35s ease;
     will-change: opacity, filter, transform;
 }
+
 
 body.at-footer #content {
     opacity: 0;

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="example.css">
+    <title>YuHsin • Portfolio </title>
+    <link rel="icon" href="images/logo_circle.ico" type="img/x-ico" />
+</head>
+
+<script>
+    const footer = document.querySelector('footer, .site-footer');
+    const ioFooter = new IntersectionObserver(
+        ([entry]) => {
+        document.body.classList.toggle('at-footer', entry.intersectionRatio > 0.35);
+        },
+        {
+        threshold: [0, 0.35, 1],
+        rootMargin: '0px 0px 0px 0px'
+        }
+    );
+
+    if (footer) ioFooter.observe(footer);
+</script>
+
+<body>
+    <main id="content">
+        <header class="hero">
+            <div class="hero_top">
+                <a href=home.html><img id=logo src="images copy/logo_title.png" alt="Elysian Logo" ></a>
+                <nav class="nav_header">
+                    <ul class="nav_list">
+                        <a href="index.html">About Me</a> |
+                        <a href="experience.html">Experience</a> |
+                        <a href="portfolio.html">Portfolio</a> |
+                        <a href="certification.html">Certification</a> 
+                    </ul>
+                </nav>
+            </div>
+        
+            <section class="portfolio_hero">
+                <h1 class="portfolio_hero_title fade-up delay-1">Portfolio</h1>
+                <p class="portfolio_hero_sub fade-up delay-2">A collection of engineering projects spanning mechanical design, thermal systems, controls, and data analysis.</p>
+            </section>
+        </header>
+
+        <section class="portfolio_gallery">
+            <div class="portfolio_grid">
+                <div class="portfolio_card fade-up">
+                    <a href="#project1">
+                        <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Belt Fault Detection">
+                        <p class="pf_name">Motor Belt Fault Detection</p>
+                        <p class="pf_tag">PowerAsia R&D · AI Monitoring</p>
+                    </a>
+                </div>
+                <div class="portfolio_card fade-up">
+                    <a href="#project2">
+                        <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Pump System Design">
+                        <p class="pf_name">Pump System Design</p>
+                        <p class="pf_tag">Fluid Mechanics</p>
+                    </a>
+                </div>
+                <div class="portfolio_card fade-up">
+                    <a href="#project3">
+                        <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="AHU Load Calculation">
+                        <p class="pf_name">AHU Load Calculation</p>
+                        <p class="pf_tag">Thermal Design</p>
+                    </a>
+                </div>
+                <div class="portfolio_card fade-up">
+                    <a href="#project4">
+                        <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Ventilation and Duct System">
+                        <p class="pf_name">Ventilation & Duct System</p>
+                        <p class="pf_tag">Thermal Design · Revit</p>
+                    </a>
+                </div>
+                <div class="portfolio_card fade-up">
+                    <a href="#project5">
+                        <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Root-Finding Methods">
+                        <p class="pf_name">Root-Finding Methods</p>
+                        <p class="pf_tag">Numerical Methods</p>
+                    </a>
+                </div>
+                <div class="portfolio_card fade-up">
+                    <a href="#project6">
+                        <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Polaris Assembler Internship">
+                        <p class="pf_name">Assembly QA & Defect Reduction</p>
+                        <p class="pf_tag">Polaris Internship</p>
+                    </a>
+                </div>
+                <div class="portfolio_card fade-up">
+                    <a href="#project7">
+                        <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Sous Vide Controller">
+                        <p class="pf_name">Arduino Sous Vide Controller</p>
+                        <p class="pf_tag">Mechatronic System I</p>
+                    </a>
+                </div>
+                <div class="portfolio_card fade-up">
+                    <a href="#project8">
+                        <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="SolidWorks FEA">
+                        <p class="pf_name">SolidWorks FEA</p>
+                        <p class="pf_tag">Mechanical Design</p>
+                    </a>
+                </div>
+                <div class="portfolio_card fade-up">
+                    <a href="#project9">
+                        <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Planetary Gear Project">
+                        <p class="pf_name">Planetary Gear Project</p>
+                        <p class="pf_tag">Mechanical Design</p>
+                    </a>
+                </div>
+                <div class="portfolio_card fade-up">
+                    <a href="#project10">
+                        <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Thermodynamics I">
+                        <p class="pf_name">Thermodynamics I</p>
+                        <p class="pf_tag">Coursework Reflection</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="project_detail" id="project1">
+            <div class="pd_text">
+                <p class="pd_role">PowerAsia R&D Mechanical Engineer Intern</p>
+                <h2>Current-Based Motor Belt Fault Detection System</h2>
+                <p class="pd_desc">Extended an AI-powered motor monitoring system to detect mechanical faults such as belt failures. Designed and implemented a current trend–based algorithm for belt fault detection and integrated it into the existing AI monitoring system.</p>
+                <ul class="pd_skills">
+                    <li>Current trend–based belt fault detection algorithm</li>
+                    <li>Signal processing & threshold-based fault classification</li>
+                    <li>Differentiated belt slippage, breakage, VFD speed changes, and normal fluctuations</li>
+                    <li>Implemented and validated using C++ (Arduino)</li>
+                    <li>Data acquisition, parameter tuning, and system debugging</li>
+                </ul>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Three-Phase Current Trends">
+                <p class="pd_caption">Three-phase current trends of an AC motor driven by a VFD, used to distinguish normal operation from belt faults.</p>
+            </div>
+        </section>
+
+        <section class="project_detail reverse" id="project2">
+            <div class="pd_text">
+                <p class="pd_role">Fluid Mechanism</p>
+                <h2>Pump System Design</h2>
+                <p class="pd_desc">Designed a pump and piping system to deliver water from a well to a tank, satisfying flow rate, pressure, and cost constraints. Evaluated multiple design alternatives and selected the most economical solution over a 10-year cost horizon.</p>
+                <ul class="pd_skills">
+                    <li>Head loss and system curve calculation</li>
+                    <li>Pump curve analysis and operating point determination</li>
+                    <li>Pump power, energy use, and cost estimation</li>
+                    <li>Pipe pressure safety verification</li>
+                    <li>Studied effects of pump speed and impeller size</li>
+                </ul>
+                <p class="pd_result">Recommended design: 3600 rpm pump, 3.25&Prime; impeller, 2.5&Prime; Schedule 80 PVC pipe — balancing operating pressure, flow rate, and cost efficiency.</p>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Pump and system curve">
+                <p class="pd_caption">Pump and system curve used to determine the optimal operating point.</p>
+            </div>
+        </section>
+
+        <section class="project_detail" id="project3">
+            <div class="pd_text">
+                <p class="pd_role">Thermal Design</p>
+                <h2>AHU Load Calculation & Design Optimization</h2>
+                <p class="pd_desc">Evaluated an air handling unit (AHU) system at the Rexburg Temple, comparing the existing steam humidifier design against a proposed pressurized humidifier through thermal load and energy cost analysis.</p>
+                <ul class="pd_skills">
+                    <li>Psychrometric analysis and air property evaluation</li>
+                    <li>Heating and cooling load calculations</li>
+                    <li>Energy consumption and operational cost estimation</li>
+                    <li>Humidification system & HVAC performance evaluation</li>
+                </ul>
+                <p class="pd_result">Recommended replacing the steam humidifier with a pressurized humidifier to improve efficiency and reduce cost.</p>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="AHU Design">
+            </div>
+        </section>
+
+        <section class="project_detail reverse" id="project4">
+            <div class="pd_text">
+                <p class="pd_role">Thermal Design</p>
+                <h2>Ventilation & Duct System Design</h2>
+                <p class="pd_desc">Designed a commercial kitchen ventilation and ductwork system in Revit for the Happy Teriyaki restaurant, focused on hood selection, airflow calculation, and duct layout with code-compliant airflow balance.</p>
+                <ul class="pd_skills">
+                    <li>Airflow (CFM) and static pressure calculations</li>
+                    <li>Duct sizing and system layout design</li>
+                    <li>Hood, exhaust fan, and make-up air unit selection</li>
+                    <li>Revit modeling of mechanical systems</li>
+                </ul>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Duct System">
+            </div>
+        </section>
+
+        <section class="project_detail" id="project5">
+            <div class="pd_text">
+                <p class="pd_role">Numerical Methods</p>
+                <h2>Root-Finding Algorithm Comparison</h2>
+                <p class="pd_desc">Compared the Bisection, Secant, and Ridder's methods for root finding on a continuous function, analyzing convergence rate and relative error at each iteration.</p>
+                <ul class="pd_skills">
+                    <li>Implemented Bisection, Secant, and Ridder's methods</li>
+                    <li>Convergence and relative error analysis</li>
+                    <li>Numerical result visualization</li>
+                </ul>
+                <p class="pd_result">All three methods converge to the same root (x &asymp; 0.948); Secant and Ridder's methods reach near machine-zero error faster than Bisection.</p>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Root Finding Convergence">
+            </div>
+        </section>
+
+        <section class="project_detail reverse" id="project6">
+            <div class="pd_text">
+                <p class="pd_role">Polaris Assembler Internship</p>
+                <h2>Assembly Line Quality Assurance & Defect Reduction</h2>
+                <p class="pd_desc">Worked as an assembly line operator running end-of-line security and quality tests across multiple snowmobile models (RMK, INDY, TITAN, SWITCHBACK), implementing standard work instructions to reduce defects.</p>
+                <ul class="pd_skills">
+                    <li>End-of-line security and quality testing</li>
+                    <li>Standard work instruction optimization</li>
+                    <li>Real-time issue identification and cross-team collaboration</li>
+                    <li>Assembly procedure refinement across models</li>
+                </ul>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Snowmobile Assembly">
+            </div>
+        </section>
+
+        <section class="project_detail" id="project7">
+            <div class="pd_text">
+                <p class="pd_role">Mechatronic System I</p>
+                <h2>Arduino Sous Vide Controller</h2>
+                <p class="pd_desc">Designed and built an Arduino-based sous-vide cooking controller that maintains a user-defined water temperature via closed-loop PID control, with sensor acquisition, relay-based actuation, and an LCD + joystick interface.</p>
+                <ul class="pd_skills">
+                    <li>Closed-loop PID control & Time Proportional Output</li>
+                    <li>Real-time feedback with DS18B20 sensor</li>
+                    <li>C/C++ programming on Arduino Uno</li>
+                    <li>16x2 I2C LCD & joystick user interface</li>
+                </ul>
+                <p class="pd_result">Achieved temperature stability within &plusmn;0.5&deg;C.</p>
+                <a class="pd_demo" href="https://youtu.be/zP-fG8snOAE" target="_blank">Watch Demo →</a>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Sous Vide Controller">
+            </div>
+        </section>
+
+        <section class="project_detail reverse" id="project8">
+            <div class="pd_text">
+                <p class="pd_role">Mechanical Design</p>
+                <h2>SolidWorks FEA</h2>
+                <p class="pd_desc">Used Finite Element Analysis in SolidWorks to evaluate the structural performance and load distribution of a base subjected to an external remote load, identifying critical stress regions.</p>
+                <ul class="pd_skills">
+                    <li>FEA studies including fixtures, loads, and constraints</li>
+                    <li>Mesh refinement in high-stress regions</li>
+                    <li>Von Mises stress, displacement, and factor of safety interpretation</li>
+                </ul>
+                <p class="pd_result">Certified SolidWorks Associate – FEA Simulation (CSWA-S).</p>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="FEA Analysis">
+            </div>
+        </section>
+
+        <section class="project_detail" id="project9">
+            <div class="pd_text">
+                <p class="pd_role">Mechanical Design</p>
+                <h2>Planetary Gear Project</h2>
+                <p class="pd_desc">Designed and built a physical planetary gear assembly using SolidWorks and CNC milling / laser cutting. Modeled the sun, planet, and ring gears and prepared technical drawings for fabrication.</p>
+                <ul class="pd_skills">
+                    <li>Fully parametric CAD models of each gear and carrier</li>
+                    <li>Motion study for kinematic verification</li>
+                    <li>CNC-milled HDPE base, laser-cut acrylic cover</li>
+                </ul>
+                <p class="pd_result">Achieved intended gear ratio with verified kinematic behavior.</p>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Planetary Gear">
+            </div>
+        </section>
+
+        <section class="project_detail reverse" id="project10">
+            <div class="pd_text">
+                <p class="pd_role">Coursework</p>
+                <h2>Thermodynamics I</h2>
+                <p class="pd_desc">An introductory course covering fluid properties, the first and second laws of thermodynamics, and analysis of basic power cycles (Otto, Diesel, Brayton, Rankine, and refrigeration), including a site visit to a real heat plant.</p>
+                <ul class="pd_skills">
+                    <li>Determining properties of state</li>
+                    <li>Applying the First and Second Laws of Thermodynamics</li>
+                    <li>Analyzing basic power and refrigeration cycles</li>
+                    <li>Evaluating engine efficiency and heat pump/refrigerator COP</li>
+                </ul>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Thermodynamics">
+            </div>
+        </section><section class="project_detail" id="project3">
+            <div class="pd_text">
+                <p class="pd_role">Thermal Design</p>
+                <h2>AHU Load Calculation & Design Optimization</h2>
+                <p class="pd_desc">Evaluated an air handling unit (AHU) system at the Rexburg Temple, comparing the existing steam humidifier design against a proposed pressurized humidifier through thermal load and energy cost analysis.</p>
+                <ul class="pd_skills">
+                    <li>Psychrometric analysis and air property evaluation</li>
+                    <li>Heating and cooling load calculations</li>
+                    <li>Energy consumption and operational cost estimation</li>
+                    <li>Humidification system & HVAC performance evaluation</li>
+                </ul>
+                <p class="pd_result">Recommended replacing the steam humidifier with a pressurized humidifier to improve efficiency and reduce cost.</p>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="AHU Design">
+            </div>
+        </section>
+
+        <section class="project_detail reverse" id="project4">
+            <div class="pd_text">
+                <p class="pd_role">Thermal Design</p>
+                <h2>Ventilation & Duct System Design</h2>
+                <p class="pd_desc">Designed a commercial kitchen ventilation and ductwork system in Revit for the Happy Teriyaki restaurant, focused on hood selection, airflow calculation, and duct layout with code-compliant airflow balance.</p>
+                <ul class="pd_skills">
+                    <li>Airflow (CFM) and static pressure calculations</li>
+                    <li>Duct sizing and system layout design</li>
+                    <li>Hood, exhaust fan, and make-up air unit selection</li>
+                    <li>Revit modeling of mechanical systems</li>
+                </ul>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Duct System">
+            </div>
+        </section>
+
+        <section class="project_detail" id="project5">
+            <div class="pd_text">
+                <p class="pd_role">Numerical Methods</p>
+                <h2>Root-Finding Algorithm Comparison</h2>
+                <p class="pd_desc">Compared the Bisection, Secant, and Ridder's methods for root finding on a continuous function, analyzing convergence rate and relative error at each iteration.</p>
+                <ul class="pd_skills">
+                    <li>Implemented Bisection, Secant, and Ridder's methods</li>
+                    <li>Convergence and relative error analysis</li>
+                    <li>Numerical result visualization</li>
+                </ul>
+                <p class="pd_result">All three methods converge to the same root (x &asymp; 0.948); Secant and Ridder's methods reach near machine-zero error faster than Bisection.</p>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Root Finding Convergence">
+            </div>
+        </section>
+
+        <section class="project_detail reverse" id="project6">
+            <div class="pd_text">
+                <p class="pd_role">Polaris Assembler Internship</p>
+                <h2>Assembly Line Quality Assurance & Defect Reduction</h2>
+                <p class="pd_desc">Worked as an assembly line operator running end-of-line security and quality tests across multiple snowmobile models (RMK, INDY, TITAN, SWITCHBACK), implementing standard work instructions to reduce defects.</p>
+                <ul class="pd_skills">
+                    <li>End-of-line security and quality testing</li>
+                    <li>Standard work instruction optimization</li>
+                    <li>Real-time issue identification and cross-team collaboration</li>
+                    <li>Assembly procedure refinement across models</li>
+                </ul>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Snowmobile Assembly">
+            </div>
+        </section>
+
+        <section class="project_detail" id="project7">
+            <div class="pd_text">
+                <p class="pd_role">Mechatronic System I</p>
+                <h2>Arduino Sous Vide Controller</h2>
+                <p class="pd_desc">Designed and built an Arduino-based sous-vide cooking controller that maintains a user-defined water temperature via closed-loop PID control, with sensor acquisition, relay-based actuation, and an LCD + joystick interface.</p>
+                <ul class="pd_skills">
+                    <li>Closed-loop PID control & Time Proportional Output</li>
+                    <li>Real-time feedback with DS18B20 sensor</li>
+                    <li>C/C++ programming on Arduino Uno</li>
+                    <li>16x2 I2C LCD & joystick user interface</li>
+                </ul>
+                <p class="pd_result">Achieved temperature stability within &plusmn;0.5&deg;C.</p>
+                <a class="pd_demo" href="https://youtu.be/zP-fG8snOAE" target="_blank">Watch Demo →</a>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Sous Vide Controller">
+            </div>
+        </section>
+
+        <section class="project_detail reverse" id="project8">
+            <div class="pd_text">
+                <p class="pd_role">Mechanical Design</p>
+                <h2>SolidWorks FEA</h2>
+                <p class="pd_desc">Used Finite Element Analysis in SolidWorks to evaluate the structural performance and load distribution of a base subjected to an external remote load, identifying critical stress regions.</p>
+                <ul class="pd_skills">
+                    <li>FEA studies including fixtures, loads, and constraints</li>
+                    <li>Mesh refinement in high-stress regions</li>
+                    <li>Von Mises stress, displacement, and factor of safety interpretation</li>
+                </ul>
+                <p class="pd_result">Certified SolidWorks Associate – FEA Simulation (CSWA-S).</p>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="FEA Analysis">
+            </div>
+        </section>
+
+        <section class="project_detail" id="project9">
+            <div class="pd_text">
+                <p class="pd_role">Mechanical Design</p>
+                <h2>Planetary Gear Project</h2>
+                <p class="pd_desc">Designed and built a physical planetary gear assembly using SolidWorks and CNC milling / laser cutting. Modeled the sun, planet, and ring gears and prepared technical drawings for fabrication.</p>
+                <ul class="pd_skills">
+                    <li>Fully parametric CAD models of each gear and carrier</li>
+                    <li>Motion study for kinematic verification</li>
+                    <li>CNC-milled HDPE base, laser-cut acrylic cover</li>
+                </ul>
+                <p class="pd_result">Achieved intended gear ratio with verified kinematic behavior.</p>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Planetary Gear">
+            </div>
+        </section>
+
+        <section class="project_detail reverse" id="project10">
+            <div class="pd_text">
+                <p class="pd_role">Coursework</p>
+                <h2>Thermodynamics I</h2>
+                <p class="pd_desc">An introductory course covering fluid properties, the first and second laws of thermodynamics, and analysis of basic power cycles (Otto, Diesel, Brayton, Rankine, and refrigeration), including a site visit to a real heat plant.</p>
+                <ul class="pd_skills">
+                    <li>Determining properties of state</li>
+                    <li>Applying the First and Second Laws of Thermodynamics</li>
+                    <li>Analyzing basic power and refrigeration cycles</li>
+                    <li>Evaluating engine efficiency and heat pump/refrigerator COP</li>
+                </ul>
+            </div>
+            <div class="pd_media">
+                <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789341720/fxn_2026-04-26_154321F9D77B58DE1F_ywfpah.jpg" alt="Thermodynamics">
+            </div>
+        </section>
+    </main>
+    </body>
+<footer class="site-footer">
+    <nav class="footer-nav">
+        <ul>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="certification.html">Certification</a></li>
+        </ul>
+    </nav>
+
+    <p class="legal">
+        ©copyright 2026. All rights reserved.
+    </p>
+    <p class="policies">
+        <a href="#">Terms of Service</a>
+        <span class="dot">•</span>
+        <a href="#">Privacy Policy</a>
+    </p>
+
+    <div class="social">
+        <a class="social__link facebook" href="https://facebook.com" target="_blank">
+            <img src="images/facebook.png" data-color="images/facebook-Icon-color.png" alt="Facebook icon">
+        </a>
+
+        <a class="social__link instagram" href="https://instagram.com" target="_blank">
+            <img src="images/instagram.png" data-color="images/instagram-Icon-color.png" alt="Instagram icon">
+        </a>
+
+        <a class="social__link youtube" href="https://youtube.com" target="_blank">
+            <img src="images/youtube.png" data-color="images/youtube-Icon-color.png" alt="YouTube icon">
+        </a>
+    </div>
+    <script>
+        document.querySelectorAll('.social__link').forEach(link => {
+        const img = link.querySelector('img');
+        const graySrc  = img.getAttribute('src');
+        const colorSrc = img.dataset.color;
+
+        link.addEventListener('mouseenter', () => {
+            img.src = colorSrc;
+        });
+
+        link.addEventListener('mouseleave', () => {
+            img.src = graySrc;
+        });
+        });
+
+        (function () {
+        const items = document.querySelectorAll('.skills_items > div');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target); // 出現過一次就不再理它，不會消失
+            }
+            });
+        }, {
+            threshold: 0.3, // item 進入畫面 30% 就觸發
+            rootMargin: '0px 0px -10% 0px' // 稍微提早或延後觸發時機，可自行微調
+        });
+
+        items.forEach((item) => observer.observe(item));
+        })();
+    </script>
+  <img class="footer-logo" src="images/logo_title.png" alt="Elysian Logo">
+</footer>
+</html>

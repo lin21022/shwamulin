@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="experience.css">
-    <title>YuHusin • Experience </title>
-    <link rel="icon" href="images copy/logo_circle.ico" type="img/x-ico" />
+    <title>YuHsin • experience </title>
+    <link rel="icon" href="images/logo_circle.ico" type="img/x-ico" />
 </head>
 
 <script>
@@ -24,82 +24,209 @@
 </script>
 
 <body>
-    <div class="progress" aria-hidden="true"></div>
-    <button id="toTop" aria-label="Baxk to top">↑</button>
-    <header class="hero">
-        <div class="hero_top">
-            <a href=home.html><img id=logo src="images copy/logo_title.png" alt="Elysian Logo" ></a>
-            <nav class="nav_header">
-                <ul class="nav_list">
-                    <a href="index.html">Home</a> |
-                    <a href="./wwr/index.html" target="_blank">WWR</a> |
-                    <a href="ICE.html">ICE</a> |
-                    <a href="aboutme.html">About Me</a> |
-                    <a href="client_report.html"> Client Report</a>
-                </ul>
-            </nav>
-        </div>
-        
-        <div class="hero_center">
-            <h1>About Me</h1>
+    <button id="navBurger" class="nav-burger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-        </div>
+    <nav id="navFlyout" class="nav-flyout">
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="certification.html">Certification</a></li>
+            <li><a href="https://drive.google.com/file/d/1PfCbcMhjt_pN-BeB-F36cjD4uYIp4P0H/view?usp=sharing" target="_blank">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/yuhsin-lin-237580235/" target="_blank">Linkedin</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
 
-        <div class="scroll-down">↓</div>
-    </header>
-    <main>
-        <section class="intro section reveal" data-delay="1">
-            <div class="intro__card">
-                <div class="intro__photo">
-                    <img src="images copy/IMG_2912.JPG" alt="Elysian portrait">
-                </div>
 
-                <div class="intro__text">
-                    <h2 class="hello">Hi! I’m <span>Elysian.</span></h2>
-                    <p>
-                        I’m studying <strong>Biochemistry</strong> at Brigham Young University–Idaho.
-                        I’m fascinated by how molecular interactions and chemical principles shape life.
-                    </p>
-                    <p>
-                        I also love blending scientific rigor with design & web development—turning complex ideas
-                        into clear, beautiful experiences.
-                    </p>
-                    <p>
-                        My north star: precision + creativity to inform, delight, and make things feel simple.
-                    </p>
-                </div>
+    <main id="content">
+        <header class="hero">
+            <div class="hero_top">
+                <a href=home.html><img id=logo src="images copy/logo_title.png" alt="Elysian Logo" ></a>
+                <nav class="nav_header">
+                    <ul class="nav_list">
+                        <a href="index.html">About Me</a> |
+                        <a href="experience.html">Experience</a> |
+                        <a href="portfolio.html">Portfolio</a> |
+                        <a href="certification.html">Certification</a> 
+                    </ul>
+                </nav>
             </div>
-        </section>
+        
+            <div class="hero_center">
+                <h1>My Experience</h1>
+                <p>Aspiring Mechanical Engineer & Researcher</p>
+            </div>
 
-        <section id="exp" class=" section experience reveal" data-delay="2">
+            <div class="scroll-down">↓</div>
+        </header>
+    <main>
+        <section id="exp" class="section experience reveal" data-delay="2">
             <h2 class="section__title left-only">Experience</h2>
 
             <div class="exp-grid">
-            <div class="exp-date">
-                <div class="date">2025.01</div>
-                <div class="tick">Current</div>
-            </div>
-            <article class="exp-detail">
-                <h3 class="role">Online Teaching Assistant</h3>
-                <ul>
-                    <li>Supported 30+ students; clarified concepts and guided problem-solving.</li>
-                    <li>Gave constructive feedback on assignments.</li>
-                    <li>Bridged communication between students and instructors.</li>
-                </ul>
-            </article>
+
+                <!-- 1. Current: R&D Mechanical Engineer Intern -->
+                <div class="exp-date">
+                    <div class="date">2026.04</div>
+                    <div class="tick">Current</div>
+                </div>
+                <article class="exp-detail">
+                    <h3 class="role">R&amp;D Mechanical Engineer Intern</h3>
+                    <p>PowerAsia Technology Co.</p>
+                    <ul>
+                        <li>Support research and development activities for mechanical systems.</li>
+                        <li>Assist with design, testing, documentation, and problem-solving.</li>
+                        <li>Apply engineering principles to practical manufacturing projects.</li>
+                    </ul>
+                </article>
+
+                <!-- 2. Engineering Statistics Teaching Assistant -->
+                <div class="exp-date">
+                    <div class="date">2025.09</div>
+                    <div class="tick">2026.04</div>
+                </div>
+                <article class="exp-detail">
+                    <h3 class="role">Engineering Statistics Teaching Assistant</h3>
+                    <p>Brigham Young University - Idaho</p>
+                    <ul>
+                        <li>Helped students understand statistical concepts and engineering applications.</li>
+                        <li>Provided feedback on assignments and supported problem-solving.</li>
+                        <li>Assisted with grading and course-related record keeping.</li>
+                    </ul>
+                </article>
+
+                <!-- 3. Mechatronics Teaching Assistant -->
+                <div class="exp-date">
+                    <div class="date">2025.09</div>
+                    <div class="tick">Current</div>
+                </div>
+                <article class="exp-detail">
+                    <h3 class="role">Mechatronics Teaching Assistant</h3>
+                    <p>Brigham Young University - Idaho</p>
+                    <ul>
+                        <li>Supported students with mechatronics concepts and laboratory activities.</li>
+                        <li>Explained technical ideas clearly and connected theory to practice.</li>
+                        <li>Assisted students with troubleshooting and project development.</li>
+                    </ul>
+                </article>
+
+                <!-- 4. Dynamic Online Teaching Assistant -->
+                <div class="exp-date">
+                    <div class="date">2025.04</div>
+                    <div class="tick">Current</div>
+                </div>
+                <article class="exp-detail">
+                    <h3 class="role">Dynamic Online Teaching Assistant</h3>
+                    <p>Brigham Young University - Idaho</p>
+                    <ul>
+                        <li>Supported students through online instruction and course activities.</li>
+                        <li>Explained complex ideas in plain language and answered questions.</li>
+                        <li>Assisted with grading, feedback, and student communication.</li>
+                    </ul>
+                </article>
+
+                <!-- 5. Full-time Volunteer Missionary -->
+                <div class="exp-date">
+                    <div class="date">2023.09</div>
+                    <div class="tick">2025.02</div>
+                </div>
+                <article class="exp-detail">
+                    <h3 class="role">Full-time Volunteer Missionary</h3>
+                    <p>The Church of Jesus Christ of Latter-day Saints</p>
+                    <ul>
+                        <li>Communicated with people from different backgrounds and cultures.</li>
+                        <li>Developed leadership, organization, and interpersonal skills.</li>
+                        <li>Planned daily activities and worked effectively with a team.</li>
+                    </ul>
+                </article>
+
+                <!-- 6. Assembler Intern -->
+                <div class="exp-date">
+                    <div class="date">2023.04</div>
+                    <div class="tick">2023.08</div>
+                </div>
+                <article class="exp-detail">
+                    <h3 class="role">Assembler Intern</h3>
+                    <p>Polaris</p>
+                    <ul>
+                        <li>Assembled components according to manufacturing instructions.</li>
+                        <li>Followed workplace safety and quality-control procedures.</li>
+                        <li>Collaborated with team members to meet production goals.</li>
+                    </ul>
+                </article>
+
+                <!-- 7. Physics Tutor -->
+                <div class="exp-date">
+                    <div class="date">2022.10</div>
+                    <div class="tick">2023.04</div>
+                </div>
+                <article class="exp-detail">
+                    <h3 class="role">Physics Tutor</h3>
+                    <p>Brigham Young University - Idaho</p>
+                    <ul>
+                        <li>Explained physics concepts and guided students through practice problems.</li>
+                        <li>Helped students connect mathematical methods to physical principles.</li>
+                        <li>Provided individualized support based on student needs.</li>
+                    </ul>
+                </article>
+
+                <!-- 8. Chemistry Tutor -->
+                <div class="exp-date">
+                    <div class="date">2022.09</div>
+                    <div class="tick">2023.04</div>
+                </div>
+                <article class="exp-detail">
+                    <h3 class="role">Chemistry Tutor</h3>
+                    <p>Brigham Young University - Idaho</p>
+                    <ul>
+                        <li>Prepared and supervised chemistry labs while following safety protocols.</li>
+                        <li>Explained complex ideas in plain language and linked theory to practice.</li>
+                        <li>Assisted with grading, lab reports, and record keeping.</li>
+                    </ul>
+                </article>
+
+                <!-- 9. Physics Teaching Assistant -->
+                <div class="exp-date">
+                    <div class="date">2022.09</div>
+                    <div class="tick">2023.04</div>
+                </div>
+                <article class="exp-detail">
+                    <h3 class="role">Physics Teaching Assistant</h3>
+                    <p>Brigham Young University - Idaho</p>
+                    <ul>
+                        <li>Supported students during physics lessons and laboratory activities.</li>
+                        <li>Clarified difficult concepts and assisted with problem-solving.</li>
+                        <li>Helped organize course materials and evaluate student work.</li>
+                    </ul>
+                </article>
+
+                <!-- 10. KUMON Teaching Assistant -->
+                <div class="exp-date">
+                    <div class="date">2021.08</div>
+                    <div class="tick">2021.12</div>
+                </div>
+                <article class="exp-detail">
+                    <h3 class="role">KUMON Teaching Assistant</h3>
+                    <p>KUMON</p>
+                    <ul>
+                        <li>Supported more than 30 students with learning and problem-solving.</li>
+                        <li>Gave constructive feedback on assignments.</li>
+                        <li>Bridged communication between students and instructors.</li>
+                    </ul>
+                </article>
+
+
+
             
-            <div class="exp-date">
-                <div class="date">2025.09</div>
-                <div class="tick">Current</div>
-            </div>
-            <article class="exp-detail">
-                <h3 class="role">Laboratory Teaching Assistant</h3>
-                <ul>
-                    <li>Prepared & supervised chemistry labs with safety protocols.</li>
-                    <li>Explained complex ideas in plain language; linked theory to practice.</li>
-                    <li>Assisted grading, lab reports, and record keeping.</li>
-                </ul>
-            </article>
+
+            
+
+            
         </section>
 
         <section class="contact section reveal" data-delay="3">
@@ -239,6 +366,31 @@
             img.src = graySrc;
         });
         });
+        (function () {
+            const THRESHOLD = 150; // 捲動超過 150px 就顯示漢堡
+
+            function toggleNav() {
+                document.body.classList.toggle('nav-scrolled', window.scrollY > THRESHOLD);
+            }
+
+            window.addEventListener('scroll', toggleNav, { passive: true });
+            toggleNav();
+
+            // 額外補上「點擊」也能開合，方便手機/觸控裝置使用（hover 在觸控裝置上不穩定）
+            const burger = document.getElementById('navBurger');
+            const flyout = document.getElementById('navFlyout');
+
+            burger.addEventListener('click', () => {
+                flyout.classList.toggle('force-open');
+            });
+
+            // 點選單以外的地方，收起被點開的選單
+            document.addEventListener('click', (e) => {
+                if (!flyout.contains(e.target) && !burger.contains(e.target)) {
+                    flyout.classList.remove('force-open');
+                }
+            });
+        })();
     </script>
   <img class="footer-logo" src="images copy/logo_title.png" alt="Elysian Logo">
 </footer>

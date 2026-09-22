@@ -24,6 +24,25 @@
 </script>
 
 <body>
+    <button id="navBurger" class="nav-burger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="navFlyout" class="nav-flyout">
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="certification.html">Certification</a></li>
+            <li><a href="https://drive.google.com/file/d/1PfCbcMhjt_pN-BeB-F36cjD4uYIp4P0H/view?usp=sharing" target="_blank">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/yuhsin-lin-237580235/" target="_blank">Linkedin</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+
     <main id="content">
         <header class="hero">
             <div class="hero_top">
@@ -51,58 +70,51 @@
             <!-- Project 1 -->
             <div class="project-card" id="project1">
                 <div class="project-info">
+                    <p class="pd-role">PowerAsia R&D</p>
                     <h2>PowerAsia R&D Mechanical Engineer Intern</h2>
-                    <p>PowerAsia developed an AI-powered monitoring system for early motor fault detection.[cite: 1] To expand its capabilities, the R&D team extended the system to detect mechanical faults such as belt failures and cooling fan malfunctions.[cite: 1] I designed and implemented a current trend–based algorithm for motor belt fault detection and integrated it into the AI monitoring system.[cite: 1]</p>
+                    <p>PowerAsia developed an AI-powered monitoring system for early motor fault detection.To expand its capabilities, the R&D team extended the system to detect mechanical faults such as belt failures and cooling fan malfunctions. I designed and implemented a current trend–based algorithm for motor belt fault detection and integrated it into the AI monitoring system.</p>
                     <h3>Technical Details & Skills Applied</h3>
                     <ul>
-                        <li>Developed a current trend–based belt fault detection algorithm.[cite: 1]</li>
-                        <li>Differentiated belt slippage, belt breakage, VFD speed adjustments, and normal current fluctuations.[cite: 1]</li>
-                        <li>Implemented and validated the detection algorithm using C++ (Arduino).[cite: 1]</li>
-                        <li>Enhanced the AI monitoring system by expanding predictive maintenance capabilities to mechanical fault detection.[cite: 1]</li>
+                        <li>Developed a current trend–based belt fault detection algorithm.</li>
+                        <li>Differentiated belt slippage, belt breakage, VFD speed adjustments, and normal current fluctuations.</li>
+                        <li>Implemented and validated the detection algorithm using C++ (Arduino).</li>
+                        <li>Enhanced the AI monitoring system by expanding predictive maintenance capabilities to mechanical fault detection.</li>
                     </ul>
                 </div>
                 <div class="project-media">
                     <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400606/%E6%8A%95%E5%BD%B1%E7%89%872_hxc51i.png" alt="Algorithm Workflow">
+                </div>
+                <div class="project-more">
+                    <a href="project-detail.html?id=project1">View More Details  → </a>
                 </div>
             </div>
 
             <!-- Project 2 -->
             <div class="project-card" id="project2">
                 <div class="project-info">
+                    <p class="pd-role">Fluid Mechanics</p>
                     <h2>Fluid Mechanism - Pump System Design</h2>
-                    <p>Design a pump and piping system to deliver water from a well to a tank while satisfying flow rate, pressure, and cost constraints.[cite: 1] The recommended design achieves safe operating pressure, required flow rate, and cost efficiency by operating the pump at 3600 rpm with a 3.25 in impeller and 2.5 in schedule 80 PVC pipe.[cite: 1]</p>
+                    <p>Design a pump and piping system to deliver water from a well to a tank while satisfying flow rate, pressure, and cost constraints. The recommended design achieves safe operating pressure, required flow rate, and cost efficiency by operating the pump at 3600 rpm with a 3.25 in impeller and 2.5 in schedule 80 PVC pipe.</p>
                     <h3>Technical Details & Skills Applied</h3>
                     <ul>
-                        <li>Calculated head loss and system curves for water flow.[cite: 1]</li>
-                        <li>Analyzed pump curves and operating points.[cite: 1]</li>
-                        <li>Estimated pump power, energy use, and costs.[cite: 1]</li>
-                        <li>Evaluated designs and selected optimal solution.[cite: 1]</li>
+                        <li>Calculated head loss and system curves for water flow.</li>
+                        <li>Analyzed pump curves and operating points.</li>
+                        <li>Estimated pump power, energy use, and costs.</li>
+                        <li>Evaluated designs and selected optimal solution.</li>
                     </ul>
                 </div>
                 <div class="project-media">
                     <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400606/%E6%8A%95%E5%BD%B1%E7%89%873_hnrv3i.png" alt="Pump System Graph">
                 </div>
+                <div class="project-more">
+                    <a href="project-detail.html?id=project2">View More Details  → </a>
+                </div>
             </div>
 
-            <!-- Project 8 -->
-            <div class="project-card" id="project8">
+            <!-- Project 3 -->
+            <div class="project-card" id="project3">
                 <div class="project-info">
-                    <h2>Mechatronic System I - Sous Vide</h2>
-                    <p>The purpose of this project was to design and implement an Arduino-based sous-vide cooking controller that accurately maintain a user-defined water temperature for an extended period using closed-loop feedback control.[cite: 1]</p>
-                    <h3>Technical Details & Skills Applied</h3>
-                    <ul>
-                        <li>Closed loop control and PID control implement.[cite: 1]</li>
-                        <li>Real-time feedback C/C++ programming on Arduino.[cite: 1]</li>
-                        <li>Designed a complete user interface using LCD and joystick for selecting temperature and duration.[cite: 1]</li>
-                    </ul>
-                </div>
-                <div class="project-media">
-                    <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400606/%E6%8A%95%E5%BD%B1%E7%89%879_bksplx.png" alt="Sous Vide Controller">
-                </div>
-            </div>
-            <!-- Project 4 -->
-            <div class="project-card" id="project4">
-                <div class="project-info">
+                    <p class="pd-role">Thermal Design</p>
                     <h2>Thermal Design - Load Calculation and Design Optimization</h2>
                     <p>This project focuses on heating and cooling load analysis by applying principles of thermodynamics, psychrometric chart and air treatment within an air handling unit (AHU). I evaluated the AHU system in the Rexburg Temple by calculating the thermal loads for both the existing design, which utilizes a steam humidifier, and a proposed design incorporating a pressurized humidifier. Through a comparative analysis of energy consumption and operational costs, I identified the pressurized humidifier as a more efficient alternative. Based on these findings, I recommended replacing the steam humidifier to improve overall system performance and energy efficiency.</p>
                     <h3>Technical Details & Skills Applied</h3>
@@ -119,13 +131,17 @@
                     </ul>
                 </div>
                 <div class="project-media">
-                    <img src="YOUR_IMAGE_LINK_HERE" alt="Thermal Design Optimization">
+                    <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400606/%E6%8A%95%E5%BD%B1%E7%89%874_s0phi4.png" alt="Thermal Design Optimization">
+                </div>
+                <div class="project-more">
+                    <a href="project-detail.html?id=project3">View More Details  → </a>
                 </div>
             </div>
 
-            <!-- Project 5 -->
-            <div class="project-card" id="project5">
+            <!-- Project 4 -->
+            <div class="project-card" id="project4">
                 <div class="project-info">
+                    <p class="pd-role">Thermal Design · Revit</p>
                     <h2>Thermal Design - Ventilation and Duct System</h2>
                     <p>This project demonstrates my understanding of commercial kitchen ventilation and ductwork design using Revit. Based on the provided Project E model of the Happy Teriyaki restaurant, I developed a mechanical ventilation system focused on hood selection, airflow calculation, and duct layout. The design evaluates exhaust and make-up air distribution across cooking equipment to ensure proper airflow balance and code-compliant performance. A complete ductwork system was modeled in Revit, integrating airflow calculations, equipment placement, and 3D system coordination within the architectural space.</p>
                     <h3>Technical Details & Skills Applied</h3>
@@ -138,13 +154,17 @@
                     </ul>
                 </div>
                 <div class="project-media">
-                    <img src="YOUR_IMAGE_LINK_HERE" alt="Ventilation and Duct System">
+                    <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400606/%E6%8A%95%E5%BD%B1%E7%89%875_aghwua.png" alt="Ventilation and Duct System">
+                </div>
+                <div class="project-more">
+                    <a href="project-detail.html?id=project4">View More Details  → </a>
                 </div>
             </div>
 
-            <!-- Project 6 -->
-            <div class="project-card" id="project6">
+            <!-- Project 5 -->
+            <div class="project-card" id="project5">
                 <div class="project-info">
+                    <p class="pd-role">Numerical Method</p>
                     <h2>Numerical Method - Root Finding Method Comparison</h2>
                     <p>This project aims to evaluate the performance of root-finding methods, including Bisection, Secant, and Ridder's methods. To perform this comparison, the root of the equation, $x \sin(10x) - x = 1$, was determined using each method. Initial guesses of $x = 0.6$ and $x = 1.2$ were used for the calculations.</p>
                     <h3>Technical Details & Skills Applied</h3>
@@ -157,13 +177,17 @@
                     </ul>
                 </div>
                 <div class="project-media">
-                    <img src="YOUR_IMAGE_LINK_HERE" alt="Numerical Method Comparison">
+                    <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400606/%E6%8A%95%E5%BD%B1%E7%89%876_fgfmhp.png" alt="Numerical Method Comparison">
+                </div>
+                <div class="project-more">
+                    <a href="project-detail.html?id=project5">View More Details  → </a>
                 </div>
             </div>
 
-            <!-- Project 7 -->
-            <div class="project-card" id="project7">
+            <!-- Project 6 -->
+            <div class="project-card" id="project6">
                 <div class="project-info">
+                    <p class="pd-role">Polaris Assembler Internship</p>
                     <h2>Polaris Assembler Internship - Assembly Line Quality Assurance</h2>
                     <p>I worked on production line as an assembly operator. I was assigned to run security test at the end of line making sure the completion, quality and security of snowmobiles for multiple models.</p>
                     <h3>Technical Details & Skills Applied</h3>
@@ -182,13 +206,38 @@
                     </ul>
                 </div>
                 <div class="project-media">
-                    <img src="YOUR_IMAGE_LINK_HERE" alt="Polaris Assembler Internship">
+                    <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400606/%E6%8A%95%E5%BD%B1%E7%89%878_el7hsv.png" alt="Polaris Assembler Internship">
+                </div>
+                <div class="project-more">
+                    <a href="project-detail.html?id=project6">View More Details  → </a>
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="project-card" id="project7">
+                <div class="project-info">
+                    <p class="pd-role">Mechatronic System I</p>
+                    <h2>Mechatronic System I - Sous Vide</h2>
+                    <p>The purpose of this project was to design and implement an Arduino-based sous-vide cooking controller that accurately maintain a user-defined water temperature for an extended period using closed-loop feedback control.[cite: 1]</p>
+                    <h3>Technical Details & Skills Applied</h3>
+                    <ul>
+                        <li>Closed loop control and PID control implement.</li>
+                        <li>Real-time feedback C/C++ programming on Arduino.</li>
+                        <li>Designed a complete user interface using LCD and joystick for selecting temperature and duration.</li>
+                    </ul>
+                </div>
+                <div class="project-media">
+                    <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400606/%E6%8A%95%E5%BD%B1%E7%89%879_bksplx.png" alt="Sous Vide Controller">
+                </div>
+                <div class="project-more">
+                    <a href="project-detail.html?id=project7">View More Details  → </a>
                 </div>
             </div>
 
             <!-- Project 8 -->
             <div class="project-card" id="project8">
                 <div class="project-info">
+                    <p class="pd-role">Thermodynamic I</p>
                     <h2>Thermodynamic I</h2>
                     <p>This is my first time to step in this area. It was hard for me at the beginning, but it became more intriguing. The course started from recognizing the property of fluid and went into the laws of thermodynamic. Finally, I was able to analyze the basic cycle in the energy industry. Visiting the real heat plan allowed me to see how to apply what have learned in real life. I am proud of myself when I could deal with all the basic cycles. Although this is a fundamental course for thermodynamic, my interests in this subject is triggered by it and I really want to dig into it deeper.</p>
                     <h3>Course Outcome</h3>
@@ -202,13 +251,17 @@
                     </ul>
                 </div>
                 <div class="project-media">
-                    <img src="YOUR_IMAGE_LINK_HERE" alt="Thermodynamics Coursework">
+                    <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400607/%E6%8A%95%E5%BD%B1%E7%89%8710_q2wl7f.png" alt="Thermodynamics Coursework">
+                </div>
+                <div class="project-more">
+                    <a href="project-detail.html?id=project8">View More Details  → </a>
                 </div>
             </div>
 
             <!-- Project 9 -->
             <div class="project-card" id="project9">
                 <div class="project-info">
+                    <p class="pd-role">Mechanical Design</p>
                     <h2>Mechanical Design - SolidWorks FEA</h2>
                     <p>This project demonstrates my experience using Finite Element Analysis (FEA) to evaluate the structural performance and load distribution of a base subjected to an external remote load. The main objective was to determine stress. Throughout this study, I focused on identifying critical regions where failure might occur, verifying results with engineering principles, and using simulation insights to evaluate design performance and safety.</p>
                     <h3>Technical Details & Skills Applied</h3>
@@ -223,13 +276,128 @@
                     </ul>
                 </div>
                 <div class="project-media">
-                    <img src="YOUR_IMAGE_LINK_HERE" alt="SolidWorks FEA">
+                    <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400607/%E6%8A%95%E5%BD%B1%E7%89%8711_c20ysu.png" alt="SolidWorks FEA">
+                </div>
+                <div class="project-more">
+                    <a href="project-detail.html?id=project9">View More Details  → </a>
                 </div>
             </div>
             
+            <!-- Project 10 -->
+            <div class="project-card" id="project10">
+                <div class="project-info">
+                    <p class="pd-role">Mechanical Design</p>
+                    <h2>Mechanical Design - Planetary Gear Project</h2>
+                    <p>This project involved designing and building a model planetary gear assembly using SolidWorks and basic fabrication processes. I modeled the sun, planet, and ring gears, designed the supporting components, and prepared the technical drawings. The final model combined a CNC-milled HDPE base with a laser-cut acrylic cover and stand.</p>
+                    <h3>Technical Details &amp; Skills Applied</h3>
+                    <ul>
+                        <li>Calculated and achieved the intended gear ratio.</li>
+                        <li>Created fully parametric CAD models for the gears and carrier.</li>
+                        <li>Applied assembly mates and used a motion study to verify kinematic behavior.</li>
+                        <li>Translated planetary gear theory into a manufacturable prototype.</li>
+                    </ul>
+                </div>
+                <div class="project-media">
+                    <img src="https://res.cloudinary.com/ddib2y7zi/image/upload/v1789400607/%E6%8A%95%E5%BD%B1%E7%89%8712_qx8xky.png" alt="Planetary Gear Project">
+                </div>
+                <div class="project-more">
+                    <a href="project-detail.html?id=project10">View More Details  → </a>
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- 這裡可以放原本的 Footer 區塊 -->
+    <footer class="site-footer">
+    <nav class="footer-nav">
+        <ul>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="certification.html">Certification</a></li>
+        </ul>
+    </nav>
+
+    <p class="legal">
+        ©copyright 2026. All rights reserved.
+    </p>
+    <p class="policies">
+        <a href="#">Terms of Service</a>
+        <span class="dot">•</span>
+        <a href="#">Privacy Policy</a>
+    </p>
+
+    <div class="social">
+        <a class="social__link facebook" href="https://facebook.com" target="_blank">
+            <img src="images/facebook.png" data-color="images/facebook-Icon-color.png" alt="Facebook icon">
+        </a>
+
+        <a class="social__link instagram" href="https://instagram.com" target="_blank">
+            <img src="images/instagram.png" data-color="images/instagram-Icon-color.png" alt="Instagram icon">
+        </a>
+
+        <a class="social__link youtube" href="https://youtube.com" target="_blank">
+            <img src="images/youtube.png" data-color="images/youtube-Icon-color.png" alt="YouTube icon">
+        </a>
+    </div>
+    <script>
+        document.querySelectorAll('.social__link').forEach(link => {
+        const img = link.querySelector('img');
+        const graySrc  = img.getAttribute('src');
+        const colorSrc = img.dataset.color;
+
+        link.addEventListener('mouseenter', () => {
+            img.src = colorSrc;
+        });
+
+        link.addEventListener('mouseleave', () => {
+            img.src = graySrc;
+        });
+        });
+
+        (function () {
+        const items = document.querySelectorAll('.skills_items > div');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target); // 出現過一次就不再理它，不會消失
+            }
+            });
+        }, {
+            threshold: 0.3, // item 進入畫面 30% 就觸發
+            rootMargin: '0px 0px -10% 0px' // 稍微提早或延後觸發時機，可自行微調
+        });
+
+        items.forEach((item) => observer.observe(item));
+        })();
+        (function () {
+            const THRESHOLD = 150; // 捲動超過 150px 就顯示漢堡
+
+            function toggleNav() {
+                document.body.classList.toggle('nav-scrolled', window.scrollY > THRESHOLD);
+            }
+
+            window.addEventListener('scroll', toggleNav, { passive: true });
+            toggleNav();
+
+            // 額外補上「點擊」也能開合，方便手機/觸控裝置使用（hover 在觸控裝置上不穩定）
+            const burger = document.getElementById('navBurger');
+            const flyout = document.getElementById('navFlyout');
+
+            burger.addEventListener('click', () => {
+                flyout.classList.toggle('force-open');
+            });
+
+            // 點選單以外的地方，收起被點開的選單
+            document.addEventListener('click', (e) => {
+                if (!flyout.contains(e.target) && !burger.contains(e.target)) {
+                    flyout.classList.remove('force-open');
+                }
+            });
+        })();
+    </script>
+  <img class="footer-logo" src="images/logo_title.png" alt="Elysian Logo">
+</footer>
 </body>
 </html>
